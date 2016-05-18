@@ -220,6 +220,18 @@
 				width: 50%;
 				min-width: 500px;
 			}
+			
+			img:not(.loaded) {
+				opacity: 0;
+				transition: opacity 0.4s ease;
+				-webkit-transition: opacity 0.4s ease;
+			}
+			
+			img.loaded {
+				opacity: 1;
+				transition: opacity 0.4s ease;
+				-webkit-transition: opacity 0.4s ease;
+			}
 
 			.corner.topRight {
 				top: 1em;
@@ -647,6 +659,16 @@
 				position: absolute;
 				background-size: 5em 15em;
 			}
+			
+			#disqus_thread {
+				max-height: 100%;
+				left: 0;
+				right: 0;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				padding: 0 1em;
+			}
 
 			h1,
 			h2 {
@@ -814,7 +836,18 @@
 				</div>
 			</div>
 			<div class="section">
-				<span class="name">¯\_(ツ)_/¯</span>
+				<div id="disqus_thread"></div>
+					<script>
+					(function() {
+					var d = document, s = d.createElement('script');
+
+					s.src = '//npaw.disqus.com/embed.js';
+
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+					})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 			</div>
 		</div>
 		<script>
