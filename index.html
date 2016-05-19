@@ -119,13 +119,16 @@
 			@keyframes twinkleAnimation {
 				0% {
 					transform: scaleX(1) scaleY(1);
+					-webkit-transform: scaleX(1) scaleY(1);
 				}
 				50% {
 					transform: scaleX(3) scaleY(3);
+					-webkit-transform: scaleX(3) scaleY(3);
 					opacity: 0.7;
 				}
 				100% {
 					transform: scaleX(1) scaleY(1);
+					-webkit-transform: scaleX(1) scaleY(1);
 				}
 			}
 
@@ -202,6 +205,7 @@
 				width: 1.41421356em;
 				height: 1.41421356em;
 				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
 				position: absolute;
 			}
 
@@ -256,18 +260,21 @@
 				top: 1em;
 				right: 0em;
 				transform-origin: 100% 0%;
+				-webkit-transform-origin: 100% 0%;
 			}
 
 			.corner.bottomLeft {
 				bottom: 1em;
 				left: 0em;
 				transform-origin: 0% 100%;
+				-webkit-transform-origin: 0% 100%;
 			}
 
 			.corner.bottomRight {
 				bottom: 0em;
 				right: 1em;
 				transform-origin: 100% 100%;
+				-webkit-transform-origin: 100% 100%;
 			}
 
 			.pawPrint .toe.one {
@@ -304,6 +311,8 @@
 				left: 3em;
 				transform-origin: 0% 0%;
 				transform: rotate(-45deg);
+				-webkit-transform-origin: 0% 0%;
+				-webkit-transform: rotate(-45deg);
 			}
 
 			.pawPrint .rightPad {
@@ -314,6 +323,8 @@
 				right: 3em;
 				transform-origin: 100% 0%;
 				transform: rotate(45deg);
+				-webkit-transform-origin: 100% 0%;
+				-webkit-transform: rotate(45deg);
 			}
 
 			.pawPrint .topPad {
@@ -378,6 +389,8 @@
 				transform: rotate(45deg);
 				position: absolute;
 				transform-origin: 0% 0%;
+				-webkit-transform: rotate(45deg);
+				-webkit-transform-origin: 0% 0%;
 			}
 
 			.pawPrint .fill {
@@ -439,6 +452,8 @@
 				left: 1em;
 				transform: rotate(45deg);
 				transform-origin: 0% 0%;
+				-webkit-transform: rotate(45deg);
+				-webkit-transform-origin: 0% 0%;
 			}
 
 			.pawPrint .toe::before {
@@ -450,6 +465,8 @@
 				left: 0em;
 				transform: rotate(-45deg);
 				transform-origin: 0% 0%;
+				-webkit-transform: rotate(-45deg);
+				-webkit-transform-origin: 0% 0%;
 			}
 
 			.outerContainer {
@@ -461,6 +478,7 @@
 				font-size: 0.07692307692em;
 				display: inline-block;
 				animation: qrFadeIn 1s ease-out;
+				-webkit-animation: qrFadeIn 1s ease-out;
 				vertical-align: middle;
 			}
 
@@ -487,6 +505,7 @@
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
 				position: absolute;
 				text-align: center;
 				/* left/right also looks cool here! */
@@ -526,7 +545,8 @@
 			
 			/* webkit transform hacks :( */
 			p, #disqus_thread {
-				backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				-webkit-transform-style: preserve-3d;
 			}
 
 			p {
@@ -565,10 +585,14 @@
 				bottom: 0;
 				margin: 0 auto;
 				transform: rotate(-135deg);
+				-webkit-transform: rotate(-135deg);
 				transform-origin: 50% 50%;
+				-webkit-transform-origin: 50% 50%;
 				cursor: pointer;
 				transition: bottom 0.2s ease;
+				-webkit-transition: bottom 0.2s ease;
 				animation: qrFadeIn 2s ease;
+				-webkit-animation: qrFadeIn 2s ease;
 			}
 
 			a:hover img {
@@ -691,6 +715,7 @@
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
 				padding: 0 1em;
 			}
 
