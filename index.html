@@ -114,6 +114,9 @@
 				animation: twinkleAnimation ease-in-out 1s;
 				animation-iteration-count: 1;
 				transform-origin: 50% 50%;
+				-webkit-animation: twinkleAnimation ease-in-out 1s;
+				-webkit-animation-iteration-count: 1;
+				-webkit-transform-origin: 50% 50%;
 			}
 
 			@keyframes twinkleAnimation {
@@ -537,6 +540,7 @@
 
 			span.typed {
 				animation: type 0.85s steps(14, end);
+				-webkit-animation: type 0.85s steps(14, end);
 				overflow: hidden;
 				width: 6.9em;
 				display: inline-block;
