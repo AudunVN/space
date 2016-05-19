@@ -131,6 +131,22 @@
 					-webkit-transform: scaleX(1) scaleY(1);
 				}
 			}
+			
+			@-webkit-keyframes twinkleAnimation {
+				0% {
+					transform: scaleX(1) scaleY(1);
+					-webkit-transform: scaleX(1) scaleY(1);
+				}
+				50% {
+					transform: scaleX(3) scaleY(3);
+					-webkit-transform: scaleX(3) scaleY(3);
+					opacity: 0.7;
+				}
+				100% {
+					transform: scaleX(1) scaleY(1);
+					-webkit-transform: scaleX(1) scaleY(1);
+				}
+			}
 
 			.pawPrint div,
 			.pawPrint .toe::after,
@@ -543,6 +559,22 @@
 					padding-right: 0.0em;
 				}
 			}
+
+			@-webkit-keyframes fadeIn {
+				0% {
+					max-width: 1em;
+				}
+				15% {
+					max-width: 1em;
+					border-right: 0.05em solid white;
+					padding-right: 0.25em;
+				}
+				100% {
+					max-width: 100%;
+					border-right: 0em solid white;
+					padding-right: 0.0em;
+				}
+			}
 			
 			/* webkit transform hacks :( */
 			p, #disqus_thread {
@@ -605,8 +637,27 @@
 					width: 0;
 				}
 			}
+			
+			@-webkit-keyframes type {
+				from {
+					width: 0;
+				}
+			}
 
 			@keyframes qrFadeIn {
+				from {
+					opacity: 0;
+					-webkit-filter: blur(100%);
+					filter: blur(100%);
+				}
+				to {
+					opacity: 1;
+					-webkit-filter: blur(0%);
+					filter: blur(0%);
+				}
+			}
+			
+			@-webkit-keyframes qrFadeIn {
 				from {
 					opacity: 0;
 					-webkit-filter: blur(100%);
