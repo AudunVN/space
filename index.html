@@ -763,6 +763,8 @@
 			
 			#disqus_thread {
 				max-height: 100%;
+				overflow-y: auto;
+				overflow-x: hidden;
 				left: 0;
 				right: 0;
 				position: absolute;
@@ -959,6 +961,7 @@
 				$('#fullpage').fullpage({
 					anchors: ['mow', 'mowmow', 'mowmowmow', 'mowmowmowmow'],
 					scrollOverflow: true,
+					normalScrollElements: '#disqus_thread',
 					scrollBar: true,
 					fitToSection: true,
 					fitToSectionDelay: 500,
