@@ -26,7 +26,7 @@
 			.backgroundContainer {
 				position: absolute;
 				top: 0;
-				bottom: -300%;
+				bottom: 0;
 				left: 0;
 				right: 0;
 			}
@@ -957,7 +957,12 @@
 			$(document).ready(function() {
 				$(".name").fitText();
 				$('#fullpage').fullpage({
-					anchors: ['mow', 'mowmow', 'mowmowmow', 'mowmowmowmow']
+					anchors: ['mow', 'mowmow', 'mowmowmow', 'mowmowmowmow'],
+					scrollOverflow: true,
+					scrollBar: true,
+					fitToSection: true,
+					fitToSectionDelay: 500,
+					animateAnchor: true
 				});
 
 				window.addEventListener("load", draw);
