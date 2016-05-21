@@ -859,8 +859,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.js"></script>
 		<!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.easings.min.js"></script>
-		<!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.slimscroll.min.js"></script>
+		<!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true`
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.slimscroll.min.js"></script>-->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
 
 		<div id="fullpage">
@@ -991,7 +991,6 @@
 				$(".name").fitText();
 				$('#fullpage').fullpage({
 					anchors: ['mow', 'mowmow', 'mowmowmow', 'mowmowmowmow'],
-					scrollOverflow: true,
 					normalScrollElements: '#disqus_thread',
 					scrollBar: true,
 					fitToSection: true,
