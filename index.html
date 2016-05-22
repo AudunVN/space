@@ -732,14 +732,25 @@
 			.linkIconNav ul li {
 				display: inline-block;
 			}
+			
+			.linkIconNav ul li a {
+				text-decoration: none;
+				font-family: "Exo 2", sans-serif;
+			}
+			
+			span.extraText {
+				margin-left: -0.25em;
+				vertical-align: middle;
+			}
 
-			.linkIconNav ul li .fa-stack-1x {
+			.linkIconNav ul li .fa-stack-1x, .linkIconNav ul li .extraText {
 				transition: color 0.15s ease, text-shadow 0.15s ease;
 				-webkit-transition: color 0.15s ease, text-shadow 0.15s ease;
 				text-shadow: 0 0 0.5em rgba(200, 200, 200, 0.5);
+				color: #fff;
 			}
 
-			.linkIconNav ul li:hover .fa-stack-1x {
+			.linkIconNav ul li:hover .fa-stack-1x, .linkIconNav ul li:hover .extraText {
 				transition: color 0.15s ease, text-shadow 0.15s ease;
 				-webkit-transition: color 0.15s ease, text-shadow 0.15s ease;
 				color: rgb(246, 179, 28);
@@ -788,7 +799,17 @@
 
 			.linkIconNav ul li:hover .fa-stack-1x.fa-paper-plane {
 				color: rgb(39, 165, 231);
-				text-shadow: 0 0 1em rgba(39, 165, 231, 0.9);
+				text-shadow: 0 0 1em rgba(39, 165, 231, 0.8);
+			}
+			
+			.linkIconNav ul li.furAffinity:hover .fa-stack-1x.fa-paw, .linkIconNav ul li.furAffinity:hover .extraText {
+				color: rgb(246, 179, 28);
+				text-shadow: 0 0 1em rgba(246, 179, 28, 0.8);
+			}
+
+			.linkIconNav ul li.furryNetwork:hover .fa-stack-1x.fa-paw, .linkIconNav ul li.furryNetwork:hover .extraText {
+				color: rgb(46, 118, 180);
+				text-shadow: 0 0 1em rgba(46, 118, 180, 0.8);
 			}
 
 			.fa-stack-2x {
@@ -970,10 +991,14 @@
 									<i class="fa fa-square fa-stack-2x"></i>
 									<i class="fa fa-globe fa-stack-1x fa-inverse"></i>
 								</span></a></li>
-								<li title="FurAffinity user page"><a target="_BLANK" href="http://www.furaffinity.net/user/space.northpaw/"><span class="fa-stack fa-lg">
+								<li class="furAffinity" title="FurAffinity user page"><a target="_BLANK" href="http://www.furaffinity.net/user/space.northpaw/"><span class="fa-stack fa-lg">
 									<i class="fa fa-square fa-stack-2x"></i>
 									<i class="fa fa-paw fa-stack-1x fa-inverse"></i>
-								</span></a></li>
+								</span><span class="extraText">fa</span></a></li>
+								<li class="furryNetwork" title="Furry Network user page"><a target="_BLANK" href="http://furrynetwork.com/space"><span class="fa-stack fa-lg">
+									<i class="fa fa-square fa-stack-2x"></i>
+									<i class="fa fa-paw fa-stack-1x fa-inverse"></i>
+								</span><span class="extraText">fn</span></a></li>
 								<li title="Telegram user"><a target="_BLANK" href="http://telegram.me/arctic_kitten"><span class="fa-stack fa-lg">
 									<i class="fa fa-square fa-stack-2x"></i>
 									<i class="fa fa-paper-plane fa-stack-1x fa-inverse"></i>
