@@ -1044,27 +1044,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="section">
-				<div id="disqus_thread"></div>
-					<script>
-					(function() {
-					var d = document, s = d.createElement('script');
-
-					s.src = '//npaw.disqus.com/embed.js';
-
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-					})();
-					</script>
-					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-			</div>
-		</div>
 		<script>
 			$(document).ready(function() {
 				$(".name").fitText();
 				$('#fullpage').fullpage({
-					anchors: ['mow', 'mowmow', 'mowmowmow', 'mowmowmowmow'],
-					normalScrollElements: '#disqus_thread',
+					anchors: ['mow', 'mowmow', 'mowmowmow'],
 					scrollBar: true,
 					fitToSection: true,
 					fitToSectionDelay: 500,
