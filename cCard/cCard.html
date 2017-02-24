@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>northpaw.space</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Space's contact card thingy">
+		<link rel="stylesheet" href="space.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet' type='text/css'>
+		<style>
+			.starfield .star {
+				position: absolute;
+				z-index: -5;
+				background-color: white;
+				width: 1px;
+				height: 1px;
+				border-radius: 100em !important;
+				box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.1);
+			}
+			
+			body {
+				font-family: "Baumans", sans-serif;
+				text-align: center;
+				color: white;
+				text-shadow: 0 0 0.1em black, 0 0 0.5em rgba(0,0,0,0.1);
+				/* 8==D */
+			}
+			
+			.header {
+				height: 2.5em;
+				width: 100%;
+				background: #041326;
+				position: absolute;
+				top: 0em;
+			}
+			
+			.footer {
+				color: black;
+				position: absolute;
+				bottom: 0;
+				height: 1.1em;
+				width: 100%;
+				z-index: 99;
+				background: #f1f1f9;
+				border-bottom-right-radius: 0.25em;
+				border-bottom-left-radius: 0.25em;
+				overflow: hidden;
+			}
+			
+			/* mow mow mow mow mow */
+		</style>
+	</head>
+	<body>
+		<div class="cardContainer">
+			<div class="card front">
+				<div class="header">
+					<div class="urlInput"><img src="fav.png" class="favicon"></img><span class="url">http://northpaw.space</span></div><div class="extra"><i class="fa fa-bars menuButton" aria-hidden="true"></i></div>
+				</div>
+				<div class="viewportWrapper">
+					<div class="viewport">
+						<div class="backgroundContainer">
+							<div class="atmosphere"></div>
+							<div class="starfield"></div>
+							<div class="mountain"></div>
+						</div>
+						<span class="logoType">
+							<span class="space">space</span> <span class="northpaw">northpaw</span>
+						</span>
+						<ul class="contact">
+							<li><i class="fa fa-telegram" aria-hidden="true"></i> <span class="telegramUsername"><span class="at">@</span>arctic_kitten</span></li>
+						</ul>
+						<img src="space9_tsp_1000px.png" class="portrait" alt="space">
+						<img src="qr.png" class="qr" alt="http://northpaw.space">
+					</div>
+				</div>
+				<img src="Glaceon25mid.png" class="glaceon" alt="glaceon">
+				<div class="footer">
+					<span class="viewSrc"><i class="fa fa-code" aria-hidden="true"></i> <span class="src">view page source</span> <i class="fa fa-repeat" aria-hidden="true"></i></span>
+				</div>
+			</div>
+			<div class="card back">
+				<div class="codeHeader">cCard.html</div>
+				<code class="html"></code>
+			</div>
+		</div>
+		<script>
+			$(".card.back code").text("<!DOCTYPE html><html>"+$("html").html()+"</html>");
+			$(document).ready(function() {
+				hljs.highlightBlock(document.querySelector("code.html"));
+			});
+		</script>
+		<script src="space.js"></script>
+	</body>
+</html>

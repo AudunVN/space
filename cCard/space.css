@@ -1,0 +1,316 @@
+/* css reset begins */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* css reset ends */
+
+.starfield .star.O {
+	background-color: rgb(173, 216, 230);
+	box-shadow: 0 0 3px 3px rgba(173, 216, 230, 0.1);
+}
+
+.starfield .star.B {
+	background-color: rgb(137, 137, 255);
+	box-shadow: 0 0 3px 3px rgba(137, 137, 255, 0.1);
+}
+
+.starfield .star.A {
+	background-color: rgb(88, 249, 255);
+	box-shadow: 0 0 3px 3px rgba(88, 249, 255, 0.1);
+}
+
+.starfield .star.F {
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.1);
+}
+
+.starfield .star.G {
+	background-color: rgb(255, 255, 169);
+	box-shadow: 0 0 3px 3px rgba(255, 255, 169, 0.1);
+}
+
+.starfield .star.K {
+	background-color: rgb(255, 221, 158);
+	box-shadow: 0 0 3px 3px rgba(255, 221, 158, 0.1);
+}
+
+.starfield .star.M {
+	background-color: rgb(255, 156, 156);
+	box-shadow: 0 0 1px 1px rgba(255, 156, 156, 0.1);
+}
+
+.twinkle {
+	animation: twinkleAnimation ease-in-out 1s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+}
+
+.starfield {
+	background: black;
+	z-index: -999;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+
+@keyframes twinkleAnimation {
+	0% {
+		transform: scaleX(1) scaleY(1);
+		-webkit-transform: scaleX(1) scaleY(1);
+	}
+	50% {
+		transform: scaleX(3) scaleY(3);
+		-webkit-transform: scaleX(3) scaleY(3);
+		opacity: 0.7;
+	}
+	100% {
+		transform: scaleX(1) scaleY(1);
+		-webkit-transform: scaleX(1) scaleY(1);
+	}
+}
+
+@-webkit-keyframes twinkleAnimation {
+	0% {
+		transform: scaleX(1) scaleY(1);
+		-webkit-transform: scaleX(1) scaleY(1);
+	}
+	50% {
+		transform: scaleX(3) scaleY(3);
+		-webkit-transform: scaleX(3) scaleY(3);
+		opacity: 0.7;
+	}
+	100% {
+		transform: scaleX(1) scaleY(1);
+		-webkit-transform: scaleX(1) scaleY(1);
+	}
+}
+
+			
+.viewportWrapper {
+	position: absolute;
+	top: 2.5em;
+	left: 0;
+	right: 0;
+	bottom: 1em;
+	border-top-left-radius: 0.25em;
+	border-top-right-radius: 0.25em;
+	overflow: hidden;
+	/* webkit border-radius clip "fix" */
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+
+.atmosphere {
+	z-index: 5;
+	/* midnight 0.85, midday 1 */
+	opacity: 0.85;
+	height: 100%;
+	width: 100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,00397a+33,00397a+55,346a8e+75,346a8e+92,ffffff+99&0+0,1+100 */
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,57,122,0.33) 33%, rgba(0,57,122,0.55) 55%, rgba(52,106,142,0.75) 75%, rgba(52,106,142,0.92) 92%, rgba(255,255,255,0.99) 99%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,57,122,0.33) 33%,rgba(0,57,122,0.55) 55%,rgba(52,106,142,0.75) 75%,rgba(52,106,142,0.92) 92%,rgba(255,255,255,0.99) 99%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,57,122,0.33) 33%,rgba(0,57,122,0.55) 55%,rgba(52,106,142,0.75) 75%,rgba(52,106,142,0.92) 92%,rgba(255,255,255,0.99) 99%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.glaceon {
+    height: 3.55838641189em;
+    width: 4em;
+    position: absolute;
+    bottom: 0.76em;
+    z-index: 999;
+    left: 1em;
+}
+
+.card.back code {
+	font-size: 0.471em;
+	color: white;
+	line-height: 95%;
+	display: block;
+	white-space: normal;
+	text-align: left;
+	word-break: break-all;
+	overflow: hidden;
+	border: 0.2em solid gray;
+}
+
+.fa-code {
+	vertical-align: -0.015em;
+}
+
+i.fa.fa-telegram:after {
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    background: white;
+    display: inline-block;
+    border-radius: 100%;
+    position: absolute;
+    left: 1.07em;
+    top: 2.11em;
+    z-index: -1;
+}
+
+.at {
+	vertical-align: -0.07em;
+}
+
+.fa-telegram {
+	font-size: 0.9em;
+	color: #2692c9;
+}
+
+.backgroundContainer .mountain {
+	width: 6em;
+    height: 6em;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+    position: absolute;
+    bottom: -2.75em;
+    left: 3.2em;
+    background: #FFF;
+    border: 0.1em solid hsla(0, 0%, 79%, 1);
+    border-radius: 0.125em;
+}
+
+.backgroundContainer {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: black;
+	position: relative;
+	z-index: -5;
+	position: absolute;
+}
+
+.portrait {
+	height: 8em;
+	width: 8em;
+	border-radius: 1em;
+	position: absolute;
+	bottom: 0;
+	right: -0.1em
+}
+
+.favicon {
+	width: 1em;
+	height: 1em;
+	vertical-align: bottom;
+	margin-right: 0.25em;
+}
+
+.url {
+	font-size: 0.95em;
+}
+
+.card.front {
+	margin-right: 1em;
+	margin-bottom: 0.65em;
+}
+
+.fa-repeat {
+	font-size: 0.9em;
+	vertical-align: -0.005em;
+}
+
+.viewSrc {
+	font-size: 0.6em;
+	vertical-align: 0.225em;
+	text-shadow: 0 0 0.3em rgba(170, 170, 170, 0.41);
+}
+			
+.contact {
+	font-size: 1.4em;
+	margin-top: 0.325em;
+}
+
+.qr {
+    height: 5em;
+    width: 5em;
+    position: absolute;
+    bottom: 6.7em;
+    margin-left: -5.9em;
+    transform: rotate(-135deg);
+}
+
+.urlInput {
+	padding: 0.3em;
+	margin: 0.375em;
+	border: 0.075em solid white;
+	border-radius: 0.2em;
+	position: absolute;
+	box-shadow: 0 0 0.2em 0em grey inset;
+	background: #2b4569;
+}
+
+.card {
+	position: relative;
+	height: 21.5em;
+	width: 13.2em;
+	border: 2em solid #041326;
+	float: left;
+	background: #041326;
+}
+
+.menuButton {
+	margin: 0.75em;
+	margin-right: 0.55em;
+	position: absolute;
+	right: 0;
+}
+
+.logoType {
+	font-size: 1.5em;
+	display: inline-block;
+	padding-top: 0.575em;
+}
+
+.viewport {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.hljs{display:block;overflow-x:auto;padding:0.5em;background:#000;color:#f8f8f8}.hljs-comment,.hljs-quote,.hljs-meta{color:#7c7c7c}.hljs-keyword,.hljs-selector-tag,.hljs-tag,.hljs-name{color:#96cbfe}.hljs-attribute,.hljs-selector-id{color:#ffffb6}.hljs-string,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-addition{color:#a8ff60}.hljs-subst{color:#daefa3}.hljs-regexp,.hljs-link{color:#e9c062}.hljs-title,.hljs-section,.hljs-type,.hljs-doctag{color:#ffffb6}.hljs-symbol,.hljs-bullet,.hljs-variable,.hljs-template-variable,.hljs-literal{color:#c6c5fe}.hljs-number,.hljs-deletion{color:#ff73fd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}
