@@ -291,6 +291,26 @@
 				background-size: contain;
 				z-index: 1;
 			}
+			
+			.bsod {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-size: contain;
+				background-color: #0202ac;
+				background-image: url(img/bsod_s.gif);
+				background-repeat: no-repeat;
+				z-index: 9999;
+				background-position: center center;
+				cursor: not-allowed;
+			}
+			
+			.display:hover .bsod {
+				display: block;
+			}
 
 			.linkIconNav ul li {
 				display: inline-block;
@@ -771,6 +791,7 @@
 					</div>-->
 					<div class="ship">
 						<div class="display">
+							<div class="bsod"></div>
 							<div class="box"></div>
 							<div class="displayElement"><canvas id="smoothie-chart" width="473" height="131"></canvas><div class="textContainer noselect"><span class="displayText"><span class="typed">space northpaw</span><span class="typing blink">_</span></span></div></div>
 							<div class="displayElement"><div class="url scrollText">northpaw.space</div></div>
@@ -794,7 +815,7 @@
 				<div class="trapezoid edge"></div>
 				<div class="ladder"></div>
 				<div class="slide">
-					<p>mow! i'm space, a web/glaceon/space/snep enthusiast, and this is my glorious<s>ly stupid</s> test/home page. yes. there are some contact/social things down below in case that's what you came here for!</p>
+					<p>mow! i'm space - a web/glaceon/space/snep enthusiast - and this is my glorious<s>ly stupid</s> test/home page. yes. there are some contact/social things down below in case that's what you came here for!</p>
 					<p>\o/</p>
 					<p>~space</p>
 				</div>
