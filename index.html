@@ -43,112 +43,6 @@
 				margin-left: 0.25em;
 			}
 
-			.pawPrint div,
-			.pawPrint .toe::after,
-			.pawPrint .toe::before {
-				box-shadow: 0 0 0.25em 0.0em #2C5AA0;
-			}
-
-			.pawPrint div,
-			.pawPrint .toe::after,
-			.pawPrint .toe::before,
-			.corner.topRight::before,
-			.corner.bottomRight::before,
-			.corner.topLeft::before,
-			.corner.bottomLeft::before {
-				background: #2C5AA0;
-				border-right-color: #2C5AA0 !important;
-				border-left-color: #2C5AA0 !important;
-			}
-
-			.outerContainer > .corner,
-			.outerContainer > .edge {
-				/*box-shadow: 0 0 0.5em 0.1em #1A2F5D;*/
-			}
-
-			.innerContainer,
-			.edge,
-			.corner {
-				background: #F9F9F9;
-			}
-
-			.innerContainer {
-				width: 11em;
-				height: 11em;
-				position: absolute;
-				top: 1em;
-				left: 1em;
-			}
-
-			.edge {
-				position: absolute;
-			}
-
-			.edge.left {
-				height: 11em;
-				width: 1em;
-				left: 0;
-				top: 1em;
-			}
-
-			.edge.top {
-				height: 1em;
-				width: 11em;
-				top: 0;
-				left: 1em;
-			}
-
-			.edge.right {
-				height: 11em;
-				width: 1em;
-				right: 0;
-				top: 1em;
-			}
-
-			.edge.bottom {
-				height: 1em;
-				width: 11em;
-				bottom: 0;
-				left: 1em;
-			}
-
-			.corner {
-				width: 1.41421356em;
-				height: 1.41421356em;
-				transform: rotate(45deg);
-				-webkit-transform: rotate(45deg);
-				position: absolute;
-			}
-
-			.corner.topLeft::before,
-			.corner.bottomLeft::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				border-top: 1em solid white;
-				border-left: 1em solid red;
-				width: 0;
-			}
-
-			.corner.topRight::before,
-			.corner.bottomRight::before {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				border-bottom: 1em solid white;
-				border-right: 1em solid red;
-				width: 0;
-			}
-
-			.corner.topLeft {
-				top: 0em;
-				left: 1em;
-				transform-origin: 0% 0%;
-				-webkit-transform-origin: 0% 0%;
-			}
-
 			.qrContainer,
 			.imgContainer {
 				display: inline-block;
@@ -268,6 +162,7 @@
 				font-size: 2.2em;
 				text-transform: lowercase;
 				display: block;
+				text-shadow: 0 0 0.5em black, 0 0 0.2em black;
 			}
 
 			.imgContainer img {
@@ -303,6 +198,7 @@
 				box-shadow: 0 0 1em 0.05em rgba(2, 94, 190, 0.8);
 				/*box-shadow: 0 0 0.5em 0em #92B9C6;*/
 				border-radius: 5px;
+				border: 2px solid rgba(2, 94, 190, 0.9);
 			}
 
 			@keyframes type {
@@ -315,6 +211,32 @@
 				from {
 					width: 0;
 				}
+			}
+			
+			.trapezoid.edge {
+				border-top: 2vh solid rgb(50,50,50);
+				border-left: 2vh solid transparent;
+				border-right: 2vh solid transparent;
+				height: 0;
+				width: 100%;
+				top: 0;
+				box-sizing: border-box;
+				position: absolute;
+				left: 0;
+				z-index: 0;
+			}
+			
+			.trapezoid.bottom {
+				border-bottom: 2vh solid rgb(50,50,50);
+				border-left: 2vh solid transparent;
+				border-right: 2vh solid transparent;
+				height: 0;
+				width: 100%;
+				box-sizing: border-box;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: 0;
 			}
 
 			@keyframes qrFadeIn {
@@ -357,6 +279,17 @@
 				padding: 0;
 				text-align: center;
 				font-size: 2em;
+			}
+			
+			.ladder {
+				position: absolute;
+				right: 23.3vh;
+				width: 20vh;
+				top: 2vh;
+				bottom: -100vh;
+				background-image: url(img/ladderTest2.png);
+				background-size: contain;
+				z-index: 1;
 			}
 
 			.linkIconNav ul li {
@@ -446,6 +379,10 @@
 				color: rgb(246, 179, 28) !important;
 				text-shadow: 0 0 1em rgba(246, 179, 28, 0.8) !important;
 			}
+			
+			.linkIconNav ul li.furTwitter:hover .extraText .fa-moon-o.fa-inverse {
+				text-shadow: 0 0 1em rgba(255, 255, 255, 0.8) !important;
+			}
 
 			.linkIconNav ul li.furryNetwork:hover .fa-stack-1x.fa-paw, .linkIconNav ul li.furryNetwork:hover .extraText {
 				color: rgb(46, 118, 180);
@@ -517,6 +454,7 @@
 				transform: translate(-50%, -50%);
 				max-width: 90vw;
 				padding: 1em;
+				z-index: 2;
 			}
 
 			.contactCard .cardContents {
@@ -548,8 +486,16 @@
 				background: rgba(0,0,20,0.4);
 				box-shadow: 0 0.25vh 2vh 2vh rgba(0,0,0,0.4) inset;
 			}
+			
+			.window a {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
 
-			.scroll.fa:hover {
+			.window a:hover .scroll.fa {
 				color: white;
 				text-shadow: 0 0 0.15em rgba(110, 171, 234, 0.9);
 				top: 61%;
@@ -771,7 +717,6 @@
 				box-shadow: 0 0 1vh 1vh rgba(0,0,0,0.2);
 			}
 
-
 			.stars {
 				height: 100%;
 				width: 100%;
@@ -782,10 +727,14 @@
 			}
 
 			.imgSection, .contactSection {
-				border-left: 2vh solid #323232;
-				border-right: 2vh solid #323232;
+				/*border-left: 2vh solid #323232;
+				border-right: 2vh solid #323232;*/
 				background: rgba(0,0,20,0.7);
-				box-shadow: 0 0 0 2px black inset;
+				/*box-shadow: 0 0 0 2px black inset;*/
+			}
+			
+			.contactSection {
+				border-bottom: 2vh solid #323232;
 			}
 		</style>
 	</head>
@@ -842,8 +791,10 @@
 				</div>
 			</div>
 			<div class="section imgSection">
+				<div class="trapezoid edge"></div>
+				<div class="ladder"></div>
 				<div class="slide">
-					<p>hi! i'm a web/glaceon/space/cat (snep!) enthusiast, and this is a glorious<s>ly stupid</s> test page of some kind. yes. there are some contact/social things down below in case that's what you came here for!</p>
+					<p>mow! i'm space, a web/glaceon/space/snep enthusiast, and this is my glorious<s>ly stupid</s> test/home page. yes. there are some contact/social things down below in case that's what you came here for!</p>
 					<p>\o/</p>
 					<p>~space</p>
 				</div>
@@ -870,6 +821,7 @@
 				</div>
 			</div>
 			<div class="section contactSection">
+				<div class="trapezoid bottom"></div>
 				<div class="contactCard">
 					<h1>contact <img class="spehs" onload="imgIsLoaded(this);" src="space9_tsp_1000px.png"></h1>
 					<h2>social thingies</h2>
@@ -901,11 +853,15 @@
 									<i class="fa fa-square fa-stack-2x"></i>
 									<i class="fa fa-steam fa-stack-1x fa-inverse"></i>
 								</span></a></li>
-								<li title="Twitter profile page" class="furTwitter"><a target="_BLANK" href="https://twitter.com/arctic_kitten"><span class="fa-stack fa-lg">
+								<li title="Twitter account" class="furTwitter"><a target="_BLANK" href="https://twitter.com/arctic_kitten"><span class="fa-stack fa-lg">
 									<i class="fa fa-square fa-stack-2x"></i>
 									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 								</span><span class="extraText"><i class="fa fa-paw fa-inverse"></i></span></a></li>
-								<li title="My slightly less furry Twitter profile page"><a target="_BLANK" href="https://twitter.com/space471"><span class="fa-stack fa-lg">
+								<li title="My slightly more dubious AD Twitter account" class="furTwitter"><a target="_BLANK" href="https://twitter.com/smolsnep"><span class="fa-stack fa-lg">
+									<i class="fa fa-square fa-stack-2x"></i>
+									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+								</span><span class="extraText"><i class="fa fa-moon-o fa-inverse"></i></span></a></li>
+								<li title="My slightly less furry Twitter account"><a target="_BLANK" href="https://twitter.com/space471"><span class="fa-stack fa-lg">
 									<i class="fa fa-square fa-stack-2x"></i>
 									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 								</span></a></li>
