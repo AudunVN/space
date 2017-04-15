@@ -294,7 +294,7 @@
 			}
 			
 			.bsod {
-				display: none;
+				opacity: 0;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -307,10 +307,12 @@
 				z-index: 9999;
 				background-position: center center;
 				cursor: not-allowed;
+				transition: opacity 0.75s ease;
 			}
 			
 			.display:hover .bsod {
-				display: block;
+				opacity: 1;
+				transition: opacity 0.1s ease;
 			}
 
 			.linkIconNav ul li {
