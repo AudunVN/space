@@ -585,6 +585,25 @@
 				box-shadow: 0 0vh 1vh 0vh #464646 inset;
 			}
 			
+			.panel:hover .cover {
+				transform: rotate(25deg);
+			}
+			
+			.panel:hover .cover .git {
+				opacity: 0.8;
+			}
+			
+			.cover .git {
+				background-image: url(img/github.png);
+				background-size: 75%;
+				background-position: center center;
+				background-repeat: no-repeat;
+				opacity: 0.5;
+				transition: opacity 0.471s ease;
+				width: 100%;
+				height: 100%;
+			}
+			
 			.cover {
 				border-radius: 1vh;
 				height: 14vh;
@@ -595,6 +614,8 @@
 				left: 0;
 				transform-origin: 7.14285714286% 9.09090909091%;
 				transform: rotate(20deg);
+				transition: transform 0.471s ease;
+				background-image: none;
 				z-index: 6;
 				box-shadow: 0 0vh 1vh 0vh #464646 inset;
 			}
@@ -938,30 +959,33 @@
 						<div class="beam lower"></div>
 						<div class="beam upper overlay"></div>
 						<div class="beam lower overlay"></div>
-						<div class="panel">
-								<div class="well">
-									<div class="cable hv"></div>
-									<div class="cable rad"></div>
+						<a href="http://github.com/AudunVN/space" target="_BLANK">
+							<div class="panel">
+									<div class="well">
+										<div class="cable hv"></div>
+										<div class="cable rad"></div>
+									</div>
+									<div class="screwSocket tl">
+										<div class="screwHole"></div>
+									</div>
+									<div class="screwSocket tr">
+										<div class="screwHole"></div>
+									</div>
+									<div class="screwSocket dl">
+										<div class="screwHole"></div>
+									</div>
+									<div class="screwSocket dr">
+										<div class="screwHole"></div>
+									</div>
+								<div class="cover">
+									<div class="git"></div>
+									<div class="screw tl"></div>
+									<div class="screw tr"></div>
+									<div class="screw dl"></div>
+									<div class="screw dr"></div>
 								</div>
-								<div class="screwSocket tl">
-									<div class="screwHole"></div>
-								</div>
-								<div class="screwSocket tr">
-									<div class="screwHole"></div>
-								</div>
-								<div class="screwSocket dl">
-									<div class="screwHole"></div>
-								</div>
-								<div class="screwSocket dr">
-									<div class="screwHole"></div>
-								</div>
-							<div class="cover">
-								<div class="screw tl"></div>
-								<div class="screw tr"></div>
-								<div class="screw dl"></div>
-								<div class="screw dr"></div>
 							</div>
-						</div>
+						</a>
 						<div class="cross left"></div>
 						<div class="cross right"></div>
 						<div class="floor">
@@ -1975,8 +1999,8 @@
 			}, 1000);
 
 			// Add to SmoothieChart
-			chart.addTimeSeries(line1);
-			chart.addTimeSeries(line2);
+			chart.addTimeSeries(line1, {lineWidth: 1, strokeStyle: '#ffffff'});
+			chart.addTimeSeries(line2, {lineWidth: 1, strokeStyle: '#ffffff'});
 
 			$(document).ready( function(){
 				//Get the canvas &
