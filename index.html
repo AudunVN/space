@@ -785,7 +785,9 @@
 				display: block;
 				padding-top: 100%;
 			}
+			
 			.floor img {
+				max-width: 40vw;
 				filter: brightness(0.925);
 			}
 
@@ -881,11 +883,18 @@
 				border-top: 2px solid black;
 			}
 
-			.floor img {
+			.floor img#glaceon {
 				position: absolute;
 				bottom: 1vh;
-				max-height: 40vh;
+				max-height: 28vh;
 				left: 10%;
+			}
+			
+			.floor img#derp {
+				position: absolute;
+				bottom: 0vh;
+				max-height: 24vh;
+				right: 3%;
 			}
 
 			.ship .floor {
@@ -1000,7 +1009,8 @@
 						<div class="cross left"></div>
 						<div class="cross right"></div>
 						<div class="floor">
-							<img onload="$(this).addClass('loaded');" src="https://northpaw.space/cCard/Glaceon25mid.png">
+							<img id="glaceon" onload="$(this).addClass('loaded');" src="https://northpaw.space/cCard/Glaceon25mid.png">
+							<img id="derp" onload="$(this).addClass('loaded');" src="https://northpaw.space/ref/img/Derp_space_padded.png">
 						</div>
 						<div class="window">
 							<a href="#mowmow"><i class="scroll fa fa-angle-double-down" aria-hidden="true"></i></a>
